@@ -5,10 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <style>
+        .red{
+            color:red;
+        }
+        .blue{
+            color: blue;
+        }
+        .baslik{
+            font-size: 3rem;
+            color: aquamarine;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
+
   </head>
   <body>
-    <h1>Hello Dom</h1>
-    <p>
+    <h1 id="pageTitle">Hello Dom</h1>
+    <p id="about">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum suscipit
       dolorum aperiam tempora totam, beatae deleniti debitis cum vitae cumque
       mollitia quaerat quos eos delectus id esse obcaecati! Explicabo, nesciunt.
@@ -25,19 +41,13 @@
     </ul>
 
     <script>
-
-        const headingEl = document.querySelector("h1");
-        console.log(headingEl.innerText);//getter
-        headingEl.innerText= "<u>Hello JavaScript<u>";//setter
-        headingEl.innerHTML= "<u>Hello JavaScript<u>";
-
-      
-        const listItems= document.querySelectorAll(".menu li");
-        console.log(listItems);
-        listItems[0].innerHTML="Contact";
-        console.log(typeof(listItems[0]));
+        const pT = document.querySelector("#pageTitle");
+        pT.classList.add("baslik");
+        console.log(pT.classList);
         
-        
+        const aboutEl= document.querySelector("#about");
+        aboutEl.classList.add("blue");
+
         
     </script>
   </body>
