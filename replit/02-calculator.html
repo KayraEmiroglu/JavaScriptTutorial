@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <body>
+      <h1 id="baslik1">Calculator</h1>
+      Number1:<input type="text" name="sayi1" id="sayi1" /><br />
+      Number2:<input type="text" name="sayi2" id="sayi2" /><br />
+      Choose a option:<select id="islem">
+        <option value="topla">Sum</option>
+        <option value="cikar">Diff</option>
+        <option value="carp">Multiple</option>
+        <option value="bolme">Divide</option></select
+      ><br />
+      Result:<input type="text" name="sonuc" id="sonuc" /><br />
+
+      <input type="submit" onclick="operate()" value="Operate" />
+
+      <script>
+        function operate() {
+          const sayi1 = Number(document.querySelector("#sayi1").value);
+          const sayi2 = Number(document.querySelector("#sayi2").value);
+          if (document.querySelector("#islem").value == "topla") {
+            const toplam = sayi1 + sayi2;
+            document.querySelector("#sonuc").value = toplam;
+          } else if (document.querySelector("#islem").value == "cikar") {
+            const cikarma = sayi1 - sayi2;
+            document.querySelector("#sonuc").value = cikarma;
+          } else if (document.querySelector("#islem").value == "carp") {
+            const carpma = sayi1 * sayi2;
+            document.querySelector("#sonuc").value = carpma;
+          } else if (document.querySelector("#islem").value == "bolme") {
+            const bolum = sayi1 / sayi2;
+            document.querySelector("#sonuc").value = bolum;
+          }
+        }
+      </script>
+    </body>
+  </body>
+</html>

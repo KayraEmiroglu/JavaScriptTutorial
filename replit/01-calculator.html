@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hesap Makinesi</h1>
+
+    <input type="number" id="txtNum1"><br>
+    <input type="number" id="txtNum2">
+    <br>
+    <select name="islem" id="Topla">
+    <button id="Topla"  onclick="sumNumbers()">Topla</button>
+    <button id="Cikar" onclick="diffNumbers()">Çıkar</button>
+    <button id="Bol" onclick="divideNumbers()">Böl</button>
+    <button id="Carp" onclick="multipleNumbers()">Çarp</button>
+    </select>   
+    <br>
+    <h1 id="result"></h1>
+
+    <script>
+        const num1El= document.querySelector("#txtNum1");
+        const num2El= document.querySelector("#txtNum2");
+        const resultEl= document.querySelector("#result");
+      function sumNumbers() {
+        const sum = Number(num1El.value) + Number(num2El.value);
+        resultEl.innerText = sum;
+      }
+      function diffNumbers() {
+        const diff = Number(num1El.value) - Number(num2El.value);
+        resultEl.innerText= diff;
+      }
+      function multipleNumbers() {
+        const multiple = Number(num1El.value) * Number(num2El.value);
+        resultEl.innerText = multiple;
+      }
+      function divideNumbers() {
+        const divide = Number(num1El.value) / Number(num2El.value);
+        resultEl.innerText = divide;
+      }
+    </script>
+  </body>
+</html>
