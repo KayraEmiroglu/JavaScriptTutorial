@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function sayHello(){
+            alert("Hello");
+        }
+        sayHello();
+
+
+        //IIFE
+        (function(){
+            alert("Hello2");
+        })();
+
+        !function(){
+            alert("Hello2");
+        }();
+
+        //IIFE yöntemi büyük projelerde birden fazla harici JS dosyasının eklendiği durumlarda
+        // her bir dosyadaki değişken ve fonksiyonların birbiri ile karışmasını engellemek için
+        //kullanılır her bir dosyadadki kodlar IIFE içinde alınarak bir scope oluşuturulup ve değişkenler iler
+        //yaşam alanları belirlenmiş olur.
+    </script>
+</body>
+</html>

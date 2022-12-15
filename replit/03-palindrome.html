@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="box"><br>
+    <button onclick="palindrome()">Proccess</button>
+    <h1 id="result"></h1>
+
+
+    <script>
+          
+
+    
+
+        //12321
+        function palindrome(){   
+            const resultEl = document.querySelector("#result"); 
+            var numberEl=Number(document.getElementById("box").value);
+            var rem , final = 0 ;
+            var temp=numberEl;
+            while(temp>0){
+                
+                rem = temp % 10;  // 1 -- 2
+                temp = parseInt(temp/10); // 1232 -- 123
+                final = final*10+rem; // 1  --12 
+            
+            }
+            if(final == numberEl){
+                resultEl.innerText ="palindrome"; 
+            }else{
+                resultEl.innerText = "not-palindrome";
+            }
+
+        }
+    </script>
+</body>
+</html>
