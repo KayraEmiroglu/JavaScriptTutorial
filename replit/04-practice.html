@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    
+    <input type="text" id="textBox">
+    <button id="btn-add" onclick="add()">Add</button><br>
+    <button class="btn-sort" onclick="sort()">Sort</button>
+    <button class="btn-reverse" onclick="reverse()">Reverse</button>
+    <button class="btn-removeLast" onclick="removeLast()">Remove Last</button>
+    <button class="btn-removeFirst" onclick="removeFirst()">Remove First</button>
+    <button class="btn-removeAll" onclick="removeAll()">Remove All</button>
+    <button class="btn-mix" onclick="mix()">Mix</button>
+
+    <ul id="listed">
+
+    </ul>
+   
+    
+    <script>
+        const list = ["Ankara","Istanbul","Izmir","Adana"];
+        let li = "";
+
+        const textEl = document.querySelector("#textBox");
+        const btnAdd = document.querySelector("#btn-add");
+
+        btnAdd.addEventListener("add",() =>{
+            
+
+        });
+
+        
+
+       
+
+    
+
+
+
+        list.forEach((list, index) => {
+        li += `<li>${list}</li>`;
+         });
+
+        document.querySelector("#listed").innerHTML = li;
+
+    </script>
+</body>
+</html>
