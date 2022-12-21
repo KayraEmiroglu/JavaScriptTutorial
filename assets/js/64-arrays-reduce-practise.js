@@ -33,7 +33,12 @@ const loadData = () => {
 
   //console.log(options);
   document.querySelector("#ddlCountries").innerHTML = options;
-};
+  document.querySelector("#totalArea span").innerHTML = getTotalArea();
+} 
+
+const getTotalArea = () =>{
+    return countries.reduce((t, country)=> t+country.area,0 );
+}
 
 
 const getCountry = (ccn3) =>{

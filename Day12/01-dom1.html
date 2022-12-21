@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="hello">Hello JavaScript</h1>
+
+    <p class="contact">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi voluptas
+      distinctio fuga molestias quia repellendus quos dignissimos optio aliquid?
+    </p>
+    <p class="about">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+      delectus exercitationem in dicta iusto facere officia et vero possimus
+      dolore autem eligendi voluptates ullam ab non facilis enim, fugit omnis.
+    </p>
+
+    <script>
+      const el1 = document.querySelector("#hello");
+      const el2 = document.getElementById("hello");
+      console.log(el2);
+
+      const el3 = document.getElementsByTagName("p");
+      console.log(el3);
+      console.log(el3[0]);
+
+      const el4 = document.getElementsByClassName("about");
+      console.log(el4);
+
+    </script>
+  </body>
+</html>
