@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        const sayHello1=()=>{
+            console.log("Hello2");
+        }
+        //senkron
+        console.log("Hello1");
+        sayHello1();
+        console.log("Hello3");
+        console.log("Hello4");
+
+
+
+        const sayHello2=()=>{
+            setTimeout(()=>{
+                console.log("Hello2");
+            },1000)
+        }
+
+        //asenkron
+        console.log("Hello1");
+        sayHello2();
+        console.log("Hello3");
+        console.log("Hello4");
+
+    </script>
+</body>
+</html>

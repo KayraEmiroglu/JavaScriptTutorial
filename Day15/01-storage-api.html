@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="welcome"></h1>
+    <h1 id="message"></h1>
+
+    <form action="">
+        <input type="text" id="txtName"><button id="btnSave">save</button>
+    </form>
+
+    
+    <script>
+
+        const handleCounter = () =>{
+            let counter = localStorage.getItem("pageCounter");
+            counter = counter ?? 0;
+            counter++;
+            document.getElementById("message").innerHTML = `Bu sayfayi ${counter}.kez ziyaret ediyorsunuz `;
+            
+            localStorage.setItem("pageCounter",counter);
+        };
+
+        handleCounter();
+
+        //localStorage.removeItem("pageCounter");
+
+        const handleWelcomeMessage = () => {
+            let name = localStorage.getItem("name");
+            name ??= "";
+            const welcomeMessage= `Welcome to my site ${name} `;
+            document.getElementById("welcome").innerHTML =welcomeMessage;
+        }
+
+
+        document.getElementById("btnSave").addEventListener("click",(e)=>{
+            e.preventDefault();
+            const name = document.getElementById("txtName").value;
+            if(!name) return;
+            localStorage.setItem("name", name);
+        });
+        handleWelcomeMessage();
+      
+    </script>
+</body>
+</html>
